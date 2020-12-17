@@ -1,13 +1,13 @@
 <p align="center">
   <img src="https://github.com/nodejs/nodejs.dev/raw/master/src/images/nodejslogo.png" width="250" />
-  <br /> <br />
-  <img src="https://www.linuxfoundation.org/wp-content/uploads/2019/03/openjsf-color.png" width="400" />
-   <br /> <br /> <br />
+  <br /> <br /> <br />
 </p>
 
-<h1 align="center">NodeJS Certification</h1>
+<h1 align="center">My own preparation for NodeJS Certification</h1>
 
-<p align="center">🎓 This repository contains practical examples for each of the points in the official NodeJS documentation for the preparation of NodeJS certification - Application Developer (JSNAD).</p>
+<p align="center">🎓 This repository contains examples that I have done for my own preparation for the NodeJS certification exam - Application Developer (JSNAD).</p>
+
+<p align="center">This content is not official from the OpenJS Foundation or from NodeJS.</p>
 
 <p align="center">
   <a title="MIT License" href="LICENSE.md">
@@ -25,15 +25,7 @@
 
 ## 🔖 Description
 
-The OpenJS Foundation is committed to growing our community of hosted projects. We believe it is important to foster a broad range of skills within the contributor and implementer communities, enabling continued and sustained adoption of JavaScript and related technologies.
-
-[OpenJS Fundation](https://openjsf.org)
-
-The OpenJS Node.js Application Developer certification is ideal for the Node.js developer with at least two years of experience working with Node.js.
-
-[Application Developer (JSNAD)](https://training.linuxfoundation.org/certification/jsnad/)
-
-This repository contains practical examples for each of the points in the official NodeJS documentation for the preparation of NodeJS certification.
+I have been working in this repository for several months. I have wanted to share OpenSource examples that I have developed for my own preparation. These examples are organized by folders for each NodeJS API.
 
 ## 📖 Temary
 
@@ -63,13 +55,7 @@ This repository contains practical examples for each of the points in the offici
 [REPL](https://nodejs.org/api/repl.html) \
 [Report](https://nodejs.org/api/report.html) \
 [Stream](https://nodejs.org/api/stream.html) \
-[String Decoder](https://nodejs.org/api/string_decoder.html) \
 [Timers](https://nodejs.org/api/timers.html) \
-[TLS/SSL](https://nodejs.org/api/tls.html) \
-[Trace Events](https://nodejs.org/api/tracing.html) \
-[TTY](https://nodejs.org/api/tty.html) \
-[UDP/Datagram](https://nodejs.org/api/dgram.html) \
-[URL](https://nodejs.org/api/url.html) \
 [Utilities](https://nodejs.org/api/util.html) \
 [V8](https://nodejs.org/api/v8.html) \
 [VM](https://nodejs.org/api/vm.html) \
@@ -149,9 +135,6 @@ This repository contains practical examples for each of the points in the offici
   - [Aprende a usar ReadStreams en NodeJS](https://carlosvillu.com/aprende-a-usar-readstream-en-nodejs/)
   - [Storing data with Node.js writable streams](http://codewinds.com/blog/2013-08-19-nodejs-writable-streams.html)
 
-- Stream
-  - [Understanding Streams in Node.js](https://nodesource.com/blog/understanding-streams-in-nodejs?utm_medium=Social&utm_source=twitter&utm_campaign=social)
-
 - Worker Threads
   - [Node.js multithreading: What are Worker Threads and why do they matter?](https://blog.logrocket.com/node-js-multithreading-what-are-worker-threads-and-why-do-they-matter-48ab102f8b10/)
   - [A complete guide to threads in Node.js](https://blog.logrocket.com/a-complete-guide-to-threads-in-node-js-4fa3898fe74f/)
@@ -165,6 +148,16 @@ This repository contains practical examples for each of the points in the offici
 - Performance Hooks
   - [Timing is Everything](https://medium.com/the-node-js-collection/timing-is-everything-6d43fc9fd416)
   - [Experimental Node.js: Testing the new performance hooks](https://blog.logrocket.com/experimental-node-js-testing-the-new-performance-hooks-31fcdd2a747e/)
+
+- Stream
+  - [Backpressuring in Streams](https://nodejs.org/es/docs/guides/backpressuring-in-streams/)
+  - [Understanding Streams in Node.js](https://nodesource.com/blog/understanding-streams-in-nodejs/)
+  - [Node.js Streams Tutorial - An Introduction to Node.js Streams](https://www.youtube.com/watch?v=YpVDaVufDVU)
+  - [Node.js Stream Tutorial - The Power and Simplicity of Node.js Streams](https://www.youtube.com/watch?v=GpGTYp_G9VE)
+  - [El manejo de streams en NodeJS](https://elabismodenull.wordpress.com/2017/03/28/el-manejo-de-streams-en-nodejs/)
+  - [Node.js Streams: Everything you need to know](https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/)
+  - [Using Node.js to Read Really, Really Large Datasets & Files](https://itnext.io/using-node-js-to-read-really-really-large-files-pt-1-d2057fe76b33)
+  - [Streams For the Win: A Performance Comparison of Node.js Methods for Reading Large Datasets (Pt 2)](https://itnext.io/streams-for-the-win-a-performance-comparison-of-nodejs-methods-for-reading-large-datasets-pt-2-bcfa732fa40e)
 
 ## 📌 Methodologies and Guidelines
 
@@ -441,7 +434,72 @@ $openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' \ -keyo
 |   |   └── ...                   # ...
 |   |
 |   ├── repl                      # REPL.
-|   |   ├── example01             # TODO.
+|   |   ├── example01             # Create REPL and press .help for show all help commands.
+|   |   ├── example02             # Create and press 2 times ^C again or ^D or type .exit.
+|   |   ├── example03             # Run REPL, create a function and execute it..
+|   |   ├── example04             # Create "replServer" and use defineCommand for include Specific Commands.
+|   |   └── ...                   # ...
+|   |
+|   ├── report                    # Diagnostic Report.
+|   |   ├── example01             # Write error and report to generic json file with an example.
+|   |   ├── example02             # Write error and report to concrete file with an example.
+|   |   ├── example03             # Launch an error and getReport to show javascriptStack object..
+|   |   ├── example04             # Show errors and reports via EventEmitter.
+|   |   └── ...                   # ...
+|   |
+|   ├── stream                    # Stream.
+|   |   ├── example01             # Write severals string into file.txt with .write function.
+|   |   ├── example02             # Include callbacks for open, ready, finish, open and error events.
+|   |   ├── example03             # Write big file with .write method with this result: 1,1G stream-big-example03.txt.
+|   |   ├── example04             # Show how many seconds the function fs.writeFile and fs.createWriteStream needs to perform the same task.
+|   |   ├── example05             # Create origin and destination Stream and use gzip for compress file destination.
+|   |   ├── example06             # Create origin Stream, Custom transform Stream and destination Stream for replace text from origin to destination file.
+|   |   ├── example07             # Http server and Read Stream for create gz file from txt file and download with browser.
+|   |   ├── example08             # Http server and Read Stream for return html file with gzip encoding.
+|   |   ├── example09             # Readable with iterate function with yield.
+|   |   ├── example10             # Readable with iterate array.
+|   |   ├── example11             # Readable Stream with iterate map with severals objects items.
+|   |   ├── example12             # Readable Object with iterate map and two pipes for work with severals Streams Writables.
+|   |   ├── example13             # Parallel Pipes with Readable from array with iterate map, transform and Write with two Stream file.
+|   |   ├── example14             # Sequentials Pipes with end option to false and Readable and Duplex with write functions more info with timeouts.
+|   |   ├── example15             # Sequentials Pipes and Readable with autoClose option to false and Duplex with end option to false and set severals writes functions.
+|   |   ├── example16             # Work with Readline and Write Stream to save line by line.
+|   |   ├── example17             # Create Stream from origin file, replace all emails to * characters and save into new Stream file.
+|   |   └── ...                   # ...
+|   |
+|   ├── timers                    # Timers.
+|   |   ├── example01             # timeout vs immediate.
+|   |   ├── example02             # timeout vs immediate with inside timers.
+|   |   ├── example03             # timeout vs severals immediate.
+|   |   ├── example04             # timeout vs immediate vs nextTick.
+|   |   ├── example05             # nextTick with try/catch and not block timeout and immediate.
+|   |   ├── example06             # timeout, immediate, nextTick and promises inside this with try/catch/finally.
+|   |   ├── example07             # timeout, immediate, nextTick and promises inside this with then/catch/finally.
+|   |   └── ...                   # ...
+|   |
+|   ├── util                      # Util.
+|   |   ├── example01             # Use .callbackify method with async function.
+|   |   ├── example02             # Use .callbackify method with Promise.
+|   |   ├── example03             # Return with .debuglog method param.
+|   |   ├── example04             # Return with .debuglog method severals params.
+|   |   ├── example05             # Return console with color in terminal and params.
+|   |   └── ...                   # ...
+|   |
+|   ├── worker-threads            # Worker Threads.
+|   |   ├── example01             # Create Worker with the same file..
+|   |   ├── example02             # Create Worker with differents files for create two parallels tasks.
+|   |   ├── example03             # Create two Worker and send messages with parent.
+|   |   ├── example04             # Create ten Worker and send messages to parent with finish setTimeout with random time.
+|   |   ├── example05             # Create Worker when update the content of local json file for change it and save into other file.
+|   |   └── ...                   # ...
+|   |
+|   ├── zlib                      # Zlib.
+|   |   ├── example01             # Compress to zip destination file from txt file how source.
+|   |   ├── example02             # Compress jpg file to zip file and decompress zip for get jpg origin file.
+|   |   ├── example03             # Create .gz file from jpg file and uncompress with createGunzip method.
+|   |   ├── example04             # Create severals .gz file with gzip, deflate and brotli methods. You can see which one is more efficient.
+|   |   ├── example05             # Create http server and return html file with Brotli Compress via response Stream.
+|   |   ├── example06             # Create http server and Static files into a public folder.
 |   |   └── ...                   # ...
 |   |
 |   └── ...
