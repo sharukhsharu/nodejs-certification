@@ -3,11 +3,11 @@
   <br /> <br />
 </p>
 
-<h1 align="center">My own preparation for NodeJS Certification</h1>
+<h1 align="center">My own preparation for Node.js Certification</h1>
 
-<p align="center">🎓 This repository contains examples that I have done for my own preparation for the NodeJS certification exam - Application Developer (JSNAD).</p>
+<p align="center">🎓 This repository contains examples that I have done for my own preparation for the Node.js certification exam - Application Developer (JSNAD).</p>
 
-<p align="center">This content is not official from the OpenJS Foundation or from NodeJS.</p>
+<p align="center">This content is not official from the OpenJS Foundation or from Node.js.</p>
 
 <p align="center">
   <a title="MIT License" href="LICENSE.md">
@@ -25,7 +25,7 @@
 
 ## 🔖 Description
 
-I have been working in this repository for several months. I have wanted to share OpenSource examples that I have developed for my own preparation. These examples are organized by folders for each NodeJS API.
+I have been working in this repository for several months. I have wanted to share OpenSource examples that I have developed for my own preparation. These examples are organized by folders for each Node.js API.
 
 ## 📖 Temary
 
@@ -165,9 +165,16 @@ ESTlint, tool for identifying and reporting on patterns found in ECMAScript/Java
   [NPM ESLint](https://www.npmjs.com/package/eslint) \
   [NPM ESLint | Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
 
-## 📐 Infrastructure
+## ✅ Prerequisites
 
-### Install NodeJS Dependences
+In order to work with this project, your local environment must have at least the following versions:
+
+* NodeJS Version: 14.xx
+* NPM Version: 6.14.7
+
+## 📐 How to work with this project
+
+### Install Dependencies
 
 ```bash
 $npm i
@@ -176,18 +183,14 @@ $npm i
 ### Running the App
 
 ```bash
-# If your NodeJS version is previous than v13.2.0
-$node  --experimental-modules ./src/'folder'/'file.mjs'
-
-# If your NodeJS version is v13.2.0 or higher
-$node ./src/'folder'/'file.mjs'
+$node ./src/'folder'/'file.js'
 ```
 
 ### Generate the SSL Certificate for localhost
 
 ```bash
 # If you want use http2 you need generate localhost certificate
-$openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' \ -keyout localhost-privkey.pem -out localhost-cert.pem
+$openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' -keyout localhost-privkey.pem -out localhost-cert.pem
 ```
 
 ## 📂 Code scaffolding
